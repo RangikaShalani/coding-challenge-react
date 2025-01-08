@@ -1,5 +1,5 @@
 
-
+/* User Card */
 .user-card-body{
     display: flex;
     padding: 10px;    
@@ -17,6 +17,7 @@
     justify-content: center;
 }
 
+/* UserList */
 .userList-main-cmp{
     display: flex;
     flex-direction: column;
@@ -36,4 +37,36 @@
 
 .userList-user-card{
     cursor: pointer;
+}
+
+/* UserProfile */
+.userProfile-main-cmp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #ebd0b7;
+    width: 100vw;
+}
+.card-mrg{
+    margin: 10px;
+    padding: 15px;
+}
+.userProfile-first-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+}
+
+.userProfile-main-tex-title{
+    font-weight: 800;
+}
+
+.userProfile-second-card-general-cont{
+    display: flex;
+    flex-direction: row;
+    
+}
+.userProfile-second-card-general-cont .card-general-item{
+    margin-right: 20px;
 }

@@ -4,7 +4,7 @@ export const StoreContext = createContext();
 
 const StoreProvider = ({ children }) => {
     const [users, setUsers] = useState([]); // Global state for user data
-    const [loading, setLoading] = useState(false); // Loading state
+    const [loading, setLoading] = useState(false);
 
     const fetchUsers = async () => {
         setLoading(true);
