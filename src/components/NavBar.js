@@ -1,20 +1,23 @@
-import React from 'react'
-import styles from "./NavBar.module.css"
-import axios from 'axios'
+import React, { useContext } from 'react';
+import styles from "./NavBar.module.css";
+import { StoreContext } from '../StoreProvider';
 
 const NavBar = () => {
 
-    const handleUserDetails = async() =>{
-        const resu = await axios.get('https://dummyjson.com/users');
-        console.log(resu.data);
-    }
+    const { fetchUsers, loading } = useContext(StoreContext); // use context data
 
     return (
         <nav className={styles.navBar}>
             <h1>User Details</h1>
-            <button className={styles.button} onClick={handleUserDetails}>Load Users</button>
+            <button
+                className={styles.button}
+                onClick={fetchUsers}
+                disabled={loading}
+            >
+                {loading ? 'Loading...' : 'Load Users'}
+            </button>
         </nav>
-    )
+    );
 }
 
 export default NavBar
