@@ -30,53 +30,53 @@ const UserProfile = () => {
             }
         };
         getUserDetails();
-    }, [userId])
+    }, [userId]);
 
-    if (loading) return <p>Loading user details...</p>;
-    if (!user) return <p>User not found.</p>;
+    if (loading) return <p className="user-msg-tsx">Loading user details...</p>;
+    if (!user) return <p className="user-msg-tsx">User not found...</p>;
 
     return (
         <div className="userProfile-main-cmp">
             <Card sx={{ maxWidth: 800 }} className="userProfile-first-card card-mrg">
                 <div>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography gutterBottom variant="h4" component="div" className="userProfile-first-header">
                         {user.firstName} {user.lastName}
                     </Typography>
                     <CardMedia
-                        sx={{ height: 300 ,width:300 }}
+                        sx={{ height: 300, width: 300 }}
                         image={user.image}
                         title="green iguana"
                     />
                 </div>
 
                 <CardContent>
-                    <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                       <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">User Name :</span> {user.username}
+                    <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                        <FiberManualRecordIcon fontSize="inherit" />
+                        <span className="userProfile-main-tex-title">User Name :</span> {user.username}
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                       <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Email : </span> {user.email}
+                    <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                        <FiberManualRecordIcon fontSize="inherit" />
+                        <span className="userProfile-main-tex-title">Email : </span> {user.email}
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                       <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Phone:</span>  {user.phone}
+                    <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                        <FiberManualRecordIcon fontSize="inherit" />
+                        <span className="userProfile-main-tex-title">Phone:</span>  {user.phone}
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                       <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Address:</span>  {user.address.address}
+                    <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                        <FiberManualRecordIcon fontSize="inherit" />
+                        <span className="userProfile-main-tex-title">Address:</span>  {user.address.address}
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                       <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Gender:</span>  {user.gender}
+                    <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                        <FiberManualRecordIcon fontSize="inherit" />
+                        <span className="userProfile-main-tex-title">Gender:</span>  {user.gender}
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                       <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Age:</span>  {user.age}
+                    <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                        <FiberManualRecordIcon fontSize="inherit" />
+                        <span className="userProfile-main-tex-title">Age:</span>  {user.age}
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                       <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">University: </span> {user.university}
+                    <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                        <FiberManualRecordIcon fontSize="inherit" />
+                        <span className="userProfile-main-tex-title">University: </span> {user.university}
                     </Typography>
                 </CardContent>
             </Card>
@@ -88,21 +88,21 @@ const UserProfile = () => {
                     </Typography>
 
                     <CardContent>
-                        <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Company Name: </span> {user.company.name}
+                        <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                            <FiberManualRecordIcon fontSize="inherit" />
+                            <span className="userProfile-main-tex-title">Company Name: </span> {user.company.name}
                         </Typography>
-                        <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Department: </span> {user.company.department}
+                        <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                            <FiberManualRecordIcon fontSize="inherit" />
+                            <span className="userProfile-main-tex-title">Department: </span> {user.company.department}
                         </Typography>
-                        <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Job Title:</span>  {user.company.title}
+                        <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                            <FiberManualRecordIcon fontSize="inherit" />
+                            <span className="userProfile-main-tex-title">Job Title:</span>  {user.company.title}
                         </Typography>
-                        <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title"> Address: </span>{user.company.address.address}
+                        <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                            <FiberManualRecordIcon fontSize="inherit" />
+                            <span className="userProfile-main-tex-title"> Address: </span>{user.company.address.address}
                         </Typography>
                     </CardContent>
                 </Card>
@@ -114,43 +114,38 @@ const UserProfile = () => {
 
                     <CardContent className="userProfile-second-card-general-cont">
                         <div className="card-general-item">
-                        <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Weight: </span> {user.weight}
-                        </Typography>
-                        <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Height: </span> {user.height}
-                        </Typography>
-                        <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Blood Group:</span>  {user.bloodGroup}
-                        </Typography>
+                            <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                                <FiberManualRecordIcon fontSize="inherit" />
+                                <span className="userProfile-main-tex-title">Weight: </span> {user.weight}
+                            </Typography>
+                            <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                                <FiberManualRecordIcon fontSize="inherit" />
+                                <span className="userProfile-main-tex-title">Height: </span> {user.height}
+                            </Typography>
+                            <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                                <FiberManualRecordIcon fontSize="inherit" />
+                                <span className="userProfile-main-tex-title">Blood Group:</span>  {user.bloodGroup}
+                            </Typography>
                         </div>
-                        
-<div>
-<Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Eye Color: </span> {user.eyeColor}
-                        </Typography>
-                        <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Hair Color: </span> {user.hair.color}
-                        </Typography>
-                        <Typography variant="body1" sx={{ color: 'text.secondary' ,lineHeight:2 }}>
-                           <FiberManualRecordIcon fontSize="inherit" /> 
-                       <span className="userProfile-main-tex-title">Hair Type:</span>  {user.hair.type}
-                        </Typography>
-</div>
-                       
-
+                        <div>
+                            <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                                <FiberManualRecordIcon fontSize="inherit" />
+                                <span className="userProfile-main-tex-title">Eye Color: </span> {user.eyeColor}
+                            </Typography>
+                            <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                                <FiberManualRecordIcon fontSize="inherit" />
+                                <span className="userProfile-main-tex-title">Hair Color: </span> {user.hair.color}
+                            </Typography>
+                            <Typography variant="body1" sx={{ color: 'text.secondary', lineHeight: 2 }}>
+                                <FiberManualRecordIcon fontSize="inherit" />
+                                <span className="userProfile-main-tex-title">Hair Type:</span>  {user.hair.type}
+                            </Typography>
+                        </div>
                     </CardContent>
                 </Card>
             </div>
-
         </div>
     )
-
 }
 
 export default UserProfile;

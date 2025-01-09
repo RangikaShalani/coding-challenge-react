@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 const UsersList = () => {
     const { users } = useContext(StoreContext);
-
     const [page, setPage] = useState(1);
     const usersPerPage = 10;
 
@@ -27,12 +26,11 @@ const UsersList = () => {
             <div className='userList-card-cmp'>
                 {users.length > 0 ? (
                     users.slice(startNumber, endNumber).map(user =>
-                        <div className='userList-user-card' onClick={()=>userNavigation(user.id)}>
+                        <div className='userList-user-card' onClick={() => userNavigation(user.id)}>
                             <UserCard key={user.id} user={user} />
                         </div>
-
                     )) : (
-                    <p>No users available. Click "Load Users" to fetch data.</p>
+                    <p className="user-msg-tsx">No users available. Click "Load Users" to fetch data.</p>
                 )}
             </div>
             {users.length === 0 ? null : (
@@ -43,7 +41,6 @@ const UsersList = () => {
                     variant="outlined"
                     color="primary" />
             )}
-
         </div>
     );
 }

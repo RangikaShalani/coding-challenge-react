@@ -28,3 +28,12 @@
 .button:active {
     background-color: #9e5d21;
 }
+
+.navBar h1{
+    cursor: pointer;
+}
+
+.navBar h1:hover{
+    cursor: pointer;
+    color: rgb(255, 200, 174);
+}
