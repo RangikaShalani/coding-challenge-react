@@ -19,3 +19,11 @@ Commit your changes as you go, it helps to show your working.
 
 Upload your code to a public repo on Github and reply to your challenge email with the link
 
+
+## Dockerize
+
+<!-- build -->
+docker build -t coding-challenge-react-main .
+
+<!-- run -->
+docker run -p 3000:3000 coding-challenge-react-main
